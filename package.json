@@ -17,7 +17,10 @@
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --overwrite --out=build --icon=Icon.icns",
+    "build": "npm run build-mac && npm run build-win && npm run build-linux",
+    "build-mac": "electron-packager . --platform=darwin --out=build --icon=icons/Icon.icns --overwrite ",
+    "build-win": "electron-packager . --platform=win32 --out=build --icon=icons/Icon.ico --overwrite ",
+    "build-linux": "electron-packager . --platform=linux --out=build --icon=icons/Icon.png --overwrite ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
