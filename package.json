@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Completed code from [Electron in Action](http://bit.ly/electronjs).",
   "main": "app/main.js",
+  "productName": "Fire Sale",
   "dependencies": {
     "electron": "^3.0.10",
     "marked": "^0.3.6"
@@ -16,6 +17,7 @@
   },
   "scripts": {
     "start": "electron .",
+    "build": "electron-packager . --overwrite --out=build --icon=Icon.icns",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
